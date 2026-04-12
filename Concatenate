@@ -1,0 +1,24 @@
+import numpy
+
+
+n, m, p = map(int, input().split())
+
+
+array_1 = []
+for _ in range(n):
+    array_1.append(list(map(int, input().split())))
+    
+
+array_2 = []
+for _ in range(m):
+    array_2.append(list(map(int, input().split())))
+
+
+np_array_1 = numpy.array(array_1)
+np_array_2 = numpy.array(array_2)
+
+
+result = numpy.concatenate((np_array_1, np_array_2), axis=0)
+
+
+print(result)
