@@ -1,0 +1,13 @@
+m = int(input())
+set_a = set(map(int, input().split()))
+
+# Set 2
+n = int(input())
+set_b = set(map(int, input().split()))
+
+# Find elements that are in A or B, but NOT both
+res = set_a.symmetric_difference(set_b)
+
+# Print sorted results line by line
+for i in sorted(res):
+    print(i)
