@@ -1,0 +1,25 @@
+import re
+
+def transform(match):
+    
+    symbol = match.group(0)
+    if symbol == "&&":
+        return "and"
+    elif symbol == "||":
+        return "or"
+
+n = int(input())
+
+
+for _ in range(n):
+    line = input()
+    
+   
+    
+    pattern = r"(?<= )(&&|\|\|)(?= )"
+    
+    result = re.sub(pattern, transform, line)
+    result = re.sub(pattern, transform, result)
+    
+    print(result)
+
