@@ -1,0 +1,21 @@
+import re
+
+# Read the number of test cases
+# Use int(raw_input()) for safety in Python 2
+try:
+    t = int(raw_input())
+except EOFError:
+    t = 0
+
+for _ in range(t):
+    try:
+        # Read the regex pattern as a raw string
+        pattern = raw_input()
+        
+        # re.compile() returns a pattern object if valid
+        # It raises re.error if the pattern is invalid
+        re.compile(pattern)
+        print True
+    except (re.error, EOFError):
+        # If compilation fails, the regex is invalid
+        print False
