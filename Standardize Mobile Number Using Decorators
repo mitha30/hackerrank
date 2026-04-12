@@ -1,0 +1,10 @@
+def wrapper(f):
+    def fun(l):
+        formatted_list = []
+        
+        for num in l:
+            clean_num = num[-10:]
+            formatted_num = f"+91 {clean_num[:5]} {clean_num[5:]}"
+            formatted_list.append(formatted_num)
+        return f(formatted_list)
+    return fun
