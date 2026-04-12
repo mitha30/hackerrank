@@ -1,0 +1,13 @@
+
+n = int(input())
+english_set = set(map(int, input().split()))
+
+
+b = int(input())
+french_set = set(map(int, input().split()))
+
+
+exclusive_students = english_set ^ french_set
+
+
+print(len(exclusive_students))
