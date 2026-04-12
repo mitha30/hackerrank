@@ -1,0 +1,32 @@
+import re
+
+def validate_uid(uid):
+
+    if len(uid) != 10:
+        return "Invalid"
+    
+
+    if not uid.isalnum():
+        return "Invalid"
+    
+s
+    if len(set(uid)) != 10:
+        return "Invalid"
+    
+    uppercase_count = len(re.findall(r'[A-Z]', uid))
+    if uppercase_count < 2:
+        return "Invalid"
+    
+    digit_count = len(re.findall(r'[0-9]', uid))
+    if digit_count < 3:
+        return "Invalid"
+    
+    return "Valid"
+
+
+try:
+    t = int(input())
+    for _ in range(t):
+        print(validate_uid(input().strip()))
+except EOFError:
+    pass
