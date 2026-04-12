@@ -1,0 +1,20 @@
+import numpy
+n, m = map(int, input().split())
+matrix = []
+for _ in range(n):
+    row = list(map(int, input().split()))
+    matrix.append(row)
+
+my_array = numpy.array(matrix)
+
+# 3. Print the Transpose
+# numpy.transpose(my_array) flips the rows and columns
+print(numpy.transpose(my_array))
+
+# 4. Print the Flattened array
+# .flatten() converts it to a 1D array
+print(my_array.flatten())
+
+
+
+
