@@ -1,0 +1,6 @@
+def get_attr_number(node):
+    total_score = len(node.attrib)
+    for child in node:
+        total_score += get_attr_number(child)
+        
+    return total_score
