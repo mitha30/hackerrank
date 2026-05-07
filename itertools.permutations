@@ -1,0 +1,17 @@
+from itertools import permutations
+
+
+s, k = input().split()
+k = int(k)
+
+
+
+target_string = sorted(s)
+
+
+result = list(permutations(target_string, k))
+
+
+for p in result:
+    print("".join(p))
+
