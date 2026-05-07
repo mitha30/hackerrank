@@ -1,0 +1,16 @@
+from itertools import groupby
+
+s = input()
+
+
+result = []
+for label, group in groupby(s):
+    
+    count = len(list(group))
+    
+    result.append(f"({count}, {int(label)})")
+
+
+print(" ".join(result))
+
+
