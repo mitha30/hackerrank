@@ -1,0 +1,19 @@
+n_a = int(input())
+
+
+storage_set = set(map(int, input().split()))
+
+
+num_ops = int(input())
+
+for _ in range(num_ops):
+  
+    operation_line = input().split()
+    cmd = operation_line[0]
+    
+
+    other_set = set(map(int, input().split()))
+
+    getattr(storage_set, cmd)(other_set)
+
+print(sum(storage_set))
