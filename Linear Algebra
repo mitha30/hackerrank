@@ -1,0 +1,10 @@
+import numpy
+
+n = int(input())
+
+
+matrix = numpy.array([input().split() for _ in range(n)], float)
+
+determinant = numpy.linalg.det(matrix)
+
+print(round(determinant, 2))
