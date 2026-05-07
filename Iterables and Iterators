@@ -1,0 +1,23 @@
+from itertools import combinations
+
+
+N = int(input())
+letters = input().split()
+K = int(input())
+
+
+all_combinations = list(combinations(range(N), K))
+
+
+
+favorable_outcomes = 0
+for combo in all_combinations:
+    for index in combo:
+        if letters[index] == 'a':
+            favorable_outcomes += 1
+            break
+
+
+probability = favorable_outcomes / len(all_combinations)
+print(f"{probability:.4f}")
+
